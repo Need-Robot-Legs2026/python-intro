@@ -151,6 +151,12 @@
 #     case 200:
 #         print('Success')
 
+
+
+
+
+
+
 # Lab challenge 5:
 
 '''
@@ -209,3 +215,50 @@ which cars are over $100,000.
 # for car in favorite_cars:
 #     if car["price"] > 100000: 
 #         print(f'The {car["make"]} {car["model"]} is over $100,000 at ${car["price"]:,.2f}.') # Using f-strings.
+
+
+
+
+
+
+
+
+# Functions:
+# Print can accept multiple object types nested inside a single list
+# print(len([1, 2, 3, "hello", 3.14, True, None, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c":3}]))
+
+# # my_string = "My favorite number is: "
+# my_number = 42
+# # print(my_string + str(my_number))
+# print(type(my_number))
+
+# my_string_number = "42"
+# print(int(my_string_number ) + my_number)
+
+# my_unsorted_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+# print(sorted(my_unsorted_list, reverse=True))
+# print(list(reversed(my_unsorted_list)))
+# print(my_unsorted_list[::-1])
+# print(sorted(my_unsorted_list))
+
+# help(sorted)
+# print(dir(sorted))
+
+# Importing a custom function:
+# from funcs.my_module import cube_number, greet_person 
+# print(cube_number(3))
+# print(greet_person('John'))
+
+# Importing a custom Class:
+from classes.my_classes import Car
+
+my_car = Car(make = 'Toyota', model = "Corolla Hybrid", year = 2023, mileage = 23596, condition = 'New', color = 'White')
+babes_car = Car(make = 'Ford', model = 'Maverick Larriat Hybrid', year = 2026, mileage = 5485, condition = 'New', color = 'Azure Grey' )
+
+# Use dotted notation to print:
+print(my_car.make, my_car.model)
+print(babes_car.make, babes_car.model)
+
+# To view everything:
+print(my_car.__dict__)
+print(babes_car.__dict__)
