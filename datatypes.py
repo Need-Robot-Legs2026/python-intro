@@ -227,9 +227,9 @@ which cars are over $100,000.
 # Print can accept multiple object types nested inside a single list
 # print(len([1, 2, 3, "hello", 3.14, True, None, [1, 2, 3], (1, 2, 3), {1, 2, 3}, {"a": 1, "b": 2, "c":3}]))
 
-# # my_string = "My favorite number is: "
+# my_string = "My favorite number is: "
 # my_number = 42
-# # print(my_string + str(my_number))
+# print(my_string + str(my_number))
 # print(type(my_number))
 
 # my_string_number = "42"
@@ -250,15 +250,37 @@ which cars are over $100,000.
 # print(greet_person('John'))
 
 # Importing a custom Class:
+# from classes.my_classes import Car
+
+# my_car = Car(make = 'Toyota', model = "Corolla Hybrid", year = 2023, mileage = 23596, condition = 'New', color = 'White')
+# babes_car = Car(make = 'Ford', model = 'Maverick Larriat Hybrid', year = 2026, mileage = 5485, condition = 'New', color = 'Azure Grey' )
+
+# # Use dotted notation to print:
+# print(my_car.make, my_car.model)
+# print(babes_car.make, babes_car.model)
+
+# # To view everything:
+# print(my_car.__dict__)
+# print(babes_car.__dict__)
+
+# # Example of some methods:
+# my_string = '    Hello, World!    '
+
+# print(my_string.strip().capitalize())
+
+# # This will show you the methods that you can use:
+# print(dir(str))
+
+# # This will show you the specific method info for strip and capitalize:
+# help(str.strip)
+# help(str.capitalize)
+
+# Example of custom class with custom methods:
+
 from classes.my_classes import Car
-
 my_car = Car(make = 'Toyota', model = "Corolla Hybrid", year = 2023, mileage = 23596, condition = 'New', color = 'White')
-babes_car = Car(make = 'Ford', model = 'Maverick Larriat Hybrid', year = 2026, mileage = 5485, condition = 'New', color = 'Azure Grey' )
 
-# Use dotted notation to print:
-print(my_car.make, my_car.model)
-print(babes_car.make, babes_car.model)
-
-# To view everything:
-print(my_car.__dict__)
-print(babes_car.__dict__)
+my_car.start()
+my_car.accelerate(20)
+my_car.accelerate(30)
+my_car.stop()
